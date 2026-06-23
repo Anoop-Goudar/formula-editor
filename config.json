@@ -1,0 +1,959 @@
+{
+  "add": {
+    "label": "Addition",
+    "category": "operator",
+    "swappableWith": [
+      "subtract",
+      "multiply",
+      "divide"
+    ],
+    "description": "Adds two numerical values together",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "subtract": {
+    "label": "Subtraction",
+    "category": "operator",
+    "swappableWith": [
+      "add",
+      "multiply",
+      "divide"
+    ],
+    "description": "Subtracts second value from first",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "multiply": {
+    "label": "Multiplication",
+    "category": "operator",
+    "swappableWith": [
+      "add",
+      "subtract",
+      "divide"
+    ],
+    "description": "Multiplies two values",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "divide": {
+    "label": "Division",
+    "category": "operator",
+    "swappableWith": [
+      "add",
+      "subtract",
+      "multiply"
+    ],
+    "description": "Divides first value by second",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "min": {
+    "label": "Minimum",
+    "category": "function",
+    "swappableWith": [],
+    "description": "Returns the smaller of two values",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "max": {
+    "label": "Maximum",
+    "category": "function",
+    "swappableWith": [],
+    "description": "Returns the larger of two values",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "First value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Second value",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      }
+    ]
+  },
+  "round": {
+    "label": "Round",
+    "category": "function",
+    "swappableWith": [],
+    "description": "Rounds first value to specified decimal places",
+    "returnType": "number",
+    "argumentCount": 2,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "Value to round",
+        "allowedTypes": [
+          "variable",
+          "literal",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ],
+        "literal": {
+          "type": "decimal"
+        }
+      },
+      {
+        "position": 1,
+        "label": "Decimal places",
+        "allowedTypes": [
+          "literal"
+        ],
+        "variables": [],
+        "literal": {
+          "type": "integer"
+        }
+      }
+    ]
+  },
+  "convert": {
+    "label": "Convert Currency",
+    "category": "function",
+    "swappableWith": [],
+    "description": "Converts amount between currencies using specified rate type",
+    "returnType": "number",
+    "argumentCount": 4,
+    "arguments": [
+      {
+        "position": 0,
+        "label": "Amount",
+        "allowedTypes": [
+          "variable",
+          "function"
+        ],
+        "variables": [
+          {
+            "code": "charges.amount",
+            "label": "charges - amount"
+          },
+          {
+            "code": "beneficiary.amount",
+            "label": "beneficiary - amount"
+          },
+          {
+            "code": "charges.commissionAmount",
+            "label": "charges - commissionAmount"
+          },
+          {
+            "code": "charges.conversionTaxAmount",
+            "label": "charges - conversionTaxAmount"
+          },
+          {
+            "code": "charges.conversionTaxableValue",
+            "label": "charges - conversionTaxableValue"
+          },
+          {
+            "code": "rate",
+            "label": "rate"
+          },
+          {
+            "code": "remitter.amount",
+            "label": "remitter - amount"
+          },
+          {
+            "code": "expence.amount",
+            "label": "expence - amount"
+          },
+          {
+            "code": "transferAmount",
+            "label": "transferAmount"
+          },
+          {
+            "code": "charges.commissionTaxAmount",
+            "label": "charges - commissionTaxAmount"
+          }
+        ]
+      },
+      {
+        "position": 1,
+        "label": "From Currency",
+        "allowedTypes": [
+          "variable",
+          "literal"
+        ],
+        "variables": [
+          {
+            "code": "charges.currency",
+            "label": "charges - currency"
+          },
+          {
+            "code": "expence.currency",
+            "label": "expence - currency"
+          },
+          {
+            "code": "remitter.currency",
+            "label": "remitter - currency"
+          },
+          {
+            "code": "beneficiary.currency",
+            "label": "beneficiary - currency"
+          },
+          {
+            "code": "transferCurrency",
+            "label": "transferCurrency"
+          }
+        ],
+        "literal": {
+          "type": "currencyCode",
+          "values": [
+            "USD",
+            "EUR",
+            "INR",
+            "RUB",
+            "JPY",
+            "GBP",
+            "CNY"
+          ]
+        }
+      },
+      {
+        "position": 2,
+        "label": "To Currency",
+        "allowedTypes": [
+          "variable",
+          "literal"
+        ],
+        "variables": [
+          {
+            "code": "charges.currency",
+            "label": "charges - currency"
+          },
+          {
+            "code": "expence.currency",
+            "label": "expence - currency"
+          },
+          {
+            "code": "remitter.currency",
+            "label": "remitter - currency"
+          },
+          {
+            "code": "beneficiary.currency",
+            "label": "beneficiary - currency"
+          },
+          {
+            "code": "transferCurrency",
+            "label": "transferCurrency"
+          }
+        ],
+        "literal": {
+          "type": "currencyCode",
+          "values": [
+            "USD",
+            "EUR",
+            "INR",
+            "RUB",
+            "JPY",
+            "GBP",
+            "CNY"
+          ]
+        }
+      },
+      {
+        "position": 3,
+        "label": "Rate Type",
+        "allowedTypes": [
+          "literal"
+        ],
+        "variables": [],
+        "literal": {
+          "type": "enum",
+          "values": [
+            "BENCHMARK"
+          ]
+        }
+      }
+    ]
+  }
+}

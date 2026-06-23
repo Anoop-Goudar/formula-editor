@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "label": "Multiply with nested Add",
+      "description": "Multiplies a value by the sum of two values",
+      "structure": {
+        "multiply": [
+          "$value1",
+          {
+            "add": [
+              "$value1",
+              "$value2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Minimum after subtraction",
+      "description": "Returns the smaller of a value and the result of subtracting one value from another",
+      "structure": {
+        "min": [
+          "$value1",
+          {
+            "subtract": [
+              "$value1",
+              "$value2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Custom formula for export bills fees",
+      "description": "Converts amount to INR at benchmark rate, applies 0.5% fee, capped between 2000 and 5000, then adds both",
+      "structure": {
+        "add": [
+          {
+            "max": [
+              {
+                "multiply": [
+                  {
+                    "convert": [
+                      "$amount",
+                      "$fromCurrency",
+                      "$toCurrency",
+                      "$rateType"
+                    ]
+                  },
+                  "$secondValue"
+                ]
+              },
+              "$secondValue"
+            ]
+          },
+          {
+            "max": [
+              {
+                "multiply": [
+                  {
+                    "convert": [
+                      "$amount",
+                      "$fromCurrency",
+                      "$toCurrency",
+                      "$rateType"
+                    ]
+                  },
+                  "$secondValue"
+                ]
+              },
+              "$secondValue"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
