@@ -154,7 +154,7 @@ function renderLegend() {
     el('span', {}, [el('span', { class: 'sw', style: `background:${color}` }), document.createTextNode(label)]);
   const wrap = el('div', { class: 'legend' }, [
     item('var(--accent-fn)', 'Function — fixed'),
-    item('var(--accent-op)', 'Operator — swappable'),
+    item('var(--accent-op)', 'Operator — fixed'),
     item('#1f7a5c', 'Variable'),
     item('var(--accent-lit)', 'Literal'),
   ]);
@@ -236,13 +236,12 @@ function renderFunctionPill(node, cfg) {
 }
 
 function renderOperatorPill(node, path, cfg, actions) {
-  return el('button', {
-    class: 'pill-op',
-    title: `${cfg.label} — click to change operator`,
-    onclick: (e) => {
-      e.stopPropagation();
-      actions.openOperatorPopover(path, e.currentTarget);
-    },
+  // Operator swapping is temporarily disabled -- operators render as locked
+  // pills, same as named functions. Re-enable by restoring the button + onclick
+  // and dropping the "pill-op-locked" class.
+  return el('span', {
+    class: 'pill-op pill-op-locked',
+    title: cfg.label,
     text: OPERATOR_SYMBOLS[node.fn] || node.fn,
   });
 }

@@ -216,6 +216,13 @@
   .pill-op:hover { box-shadow: 0 0 0 3px var(--accent-op-bg), 0 0 0 4px #f3d9b8; }
   .pill-op:active { transform: scale(.95); }
 
+  /* Locked operator -- swapping is temporarily disabled, so the pill stays
+     orange (to keep the formula reading as operator-based) but loses the
+     button affordances. */
+  .pill-op-locked { cursor: default; }
+  .pill-op-locked:hover { box-shadow: none; }
+  .pill-op-locked:active { transform: none; }
+
   /* leaf: variable */
   .pill-leaf {
     border-radius: 999px;
