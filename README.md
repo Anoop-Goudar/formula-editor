@@ -6,8 +6,17 @@ a GraphQL endpoint (mocked locally for now).
 
 ## Running it
 
-Just open `index.html` in a browser — no build step, no server needed.
-All data is inlined into `data.js` (see "Editing templates/config" below).
+The app loads `templates.json` and `config.json` over `fetch()`, which
+browsers block on `file://`, so you need a tiny static server. From this
+directory:
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+Any static server works — this just keeps the setup close to a real
+deployment where templates and config arrive over the network.
 
 ## How it works
 
@@ -25,9 +34,6 @@ All data is inlined into `data.js` (see "Editing templates/config" below).
   - `"swappableWith"`: which other function names this one can become.
     Operators can swap with each other; named functions cannot be swapped
     for anything — that's explicit future scope, not supported today.
-- **`data.js`** — loads the two JSON files above. They're inlined directly
-  into this file (rather than fetched at runtime) so the app works by
-  double-clicking `index.html`, with no local server and no CORS issues.
 - **`formula-model.js`** — pure tree logic: parsing a template's structure
   into an editable node tree, path-based get/set, swap-legality checks,
   validation (flags any still-unset leaf), and serialization back to the
@@ -42,15 +48,9 @@ All data is inlined into `data.js` (see "Editing templates/config" below).
 
 ## Editing templates or config
 
-`templates.json` and `config.json` are the source of truth — edit those
-directly, then regenerate `data.js` so the browser picks up the change:
-
-```bash
-python3 generate_data_js.py
-```
-
-Don't hand-edit the `TEMPLATES_JSON` / `CONFIG_JSON` objects inside
-`data.js`; they're generated output.
+`templates.json` and `config.json` are the source of truth — edit them
+directly and reload the page. The browser fetches them on each load, so
+there's no build or regeneration step.
 
 ## Editing rules enforced by the app
 
@@ -69,7 +69,7 @@ Don't hand-edit the `TEMPLATES_JSON` / `CONFIG_JSON` objects inside
 
 ## Swapping in the real backend
 
-Replace the body of `fetchTemplates()` in `data.js` with a real GraphQL
+Replace the body of `fetchTemplates()` in `main.js` with a real GraphQL
 call:
 
 ```graphql

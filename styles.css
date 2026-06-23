@@ -253,8 +253,15 @@
   }
   .pill-leaf .x-remove:hover { opacity: 1; color: var(--danger); }
 
-  /* nested sub-row indentation when wrapping gets deep — keep flat/inline per screenshots */
-  .sub-call { display: inline-flex; align-items: center; gap: 6px; }
+  /* Nested call rendering. flex-wrap lets deep formulas (e.g. add(max(multiply(
+     convert(...), ...), ...), ...)) break across lines instead of overflowing
+     the card. row-gap matches the column gap so wrapped rows breathe. */
+  .sub-call {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
 
   /* ---------- Popover ---------- */
   .popover-backdrop {

@@ -2,7 +2,8 @@
  * formula-model.js
  * -----------------------------------------------------------------------
  * Pure data/logic layer. No DOM here — render.js and main.js depend on
- * this, this depends on nothing but CONFIG_JSON (from data.js).
+ * this, this depends on nothing but the config object (loaded from
+ * config.json by main.js).
  *
  * A "node" in a formula tree is one of:
  *   - a call node:   { fn: "add", args: [node, node, ...] }

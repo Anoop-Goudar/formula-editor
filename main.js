@@ -11,7 +11,7 @@
 const state = {
   loading: true,
   templates: [],       // [{ label, description, structure }]
-  config: {},           // CONFIG_JSON, fetched
+  config: {},           // editing rulebook, fetched from config.json
   selectedIndex: null,
   tree: null,            // editable model tree for the selected template (parseStructure output)
   originalTree: null,    // snapshot for Reset
@@ -140,6 +140,24 @@ function popoverPositionFor(anchorEl) {
 }
 
 /* ------------------------------------------------------------- bootstrap */
+
+// In production fetchTemplates() becomes a real GraphQL query:
+//   query GetFormulaTemplates { formulaTemplates { label description structure } }
+// Nothing else in the app needs to change -- the rest of the code only depends
+// on the shape returned here:
+//   fetchTemplates() -> [{ label, description, structure }, ...]
+//   fetchConfig()    -> { <fnName>: { label, category, swappableWith,
+//                          argumentCount, arguments: [...] }, ... }
+async function fetchTemplates() {
+  const res = await fetch('templates.json');
+  const data = await res.json();
+  return data.templates;
+}
+
+async function fetchConfig() {
+  const res = await fetch('config.json');
+  return res.json();
+}
 
 async function bootstrap() {
   rerender(); // show loading state immediately
